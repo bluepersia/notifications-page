@@ -1,0 +1,188 @@
+:root 
+{
+    --Red: hsl(1, 90%, 64%);
+    --Blue: hsl(219, 85%, 26%);
+
+
+    --White: hsl(0, 0%, 100%);
+    --Verylightgrayishblue: hsl(210, 60%, 98%);
+    --Lightgrayishblue1: hsl(211, 68%, 94%);
+    --Lightgrayishblue2: hsl(205, 33%, 90%);
+    --Grayishblue: hsl(219, 14%, 63%);
+    --Darkgrayishblue: hsl(219, 12%, 42%);
+    --Verydarkblue: hsl(224, 21%, 14%);
+}
+
+
+body {
+    margin: 0;
+    font-family: "Plus Jakarta Sans", sans-serif;;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+.notifications {
+    max-width: 735px;
+    padding: 1.8em 4.5%;
+}
+
+.notifications_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em 0;
+}
+
+.notifications_title{
+    margin-bottom: 0;
+}
+
+.notifications_title span {
+    background-color: var(--Blue);
+    color: white;
+    padding: 0 .4em;
+    border-radius: 6px;
+    margin-left: .3em;
+}
+
+.notifications_mark-all {
+    margin-top: 0;
+    color: var(--Darkgrayishblue);
+    cursor: pointer;
+    transition: color 300ms;
+}
+
+.notifications_mark-all:hover {
+    color: var(--Blue);
+}  
+
+.notifications_note {
+    display: flex;
+    align-items: start;
+    gap: 1em;
+    width: 100%;
+    padding: 1.2em;
+}
+
+.notifications_note:not(:last-child)
+{
+    margin-bottom: 1em;
+}
+
+.notifications_note.new {
+    background-color: var(--Verylightgrayishblue);
+}
+
+.notifications_img-avatar {
+    width: 40px;
+    height: 40px;
+}
+
+.notifications_note_content 
+{   
+    width: 100%;
+}
+
+.notifications_txt {
+    margin-bottom: 0;
+    color: var(--Darkgrayishblue);
+    position: relative;
+    display: inline;
+}
+
+.notifications_txt .name 
+{   
+    font-weight: bold;
+    color: var(--Verydarkblue);
+    cursor: pointer;
+    transition: color 300ms;
+}
+
+.notifications_txt .name:hover
+{
+    color: var(--Blue);
+}
+
+.notifications_txt .post-title, .notifications_txt .group-title {
+    font-weight: bold;
+    cursor: pointer;
+    transform: color 300ms;
+}
+
+.notifications_txt .post-title:hover, .notifications_txt .group-title:hover
+{
+    color: var(--Blue);
+}
+
+.notifications_dot-new
+{
+    display: inline-block;
+    border: solid 1px red;;
+    background-color: var(--Red);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-left: .5em;
+    margin-bottom: 0;
+}
+
+
+.notifications_time {
+    margin-top: 0;
+    color: var(--Grayishblue);
+}
+
+.notifications_note.new .notifications_time {
+    margin-top: -.8em;
+}
+.notifications_msg 
+{
+    border: solid 1px var(--Lightgrayishblue2);
+    color:var(--Darkgrayishblue);
+    border-radius: 6px;
+    padding: 1em;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+.notifications_msg:hover{
+    background-color: var(--Lightgrayishblue2);
+    border: none;
+}
+
+.notifications_img-commented
+{
+    max-width: 48px;
+    max-height: 48px;
+    align-self: stretch;
+    cursor: pointer;
+}
+
+
+
+* :first-child
+{
+    margin-top: 0;
+}
+
+* :last-child{
+    margin-bottom: 0;
+}
+
+
+@media (min-width: 768px)
+{
+    .notifications_img-avatar 
+    {
+        width: 48px;
+        height: 48px;
+    }
+}
